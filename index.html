@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="css/style.css">
+  <script src="/js/form.js" defer></script>
+  <title>Frontend Mentor | Interactive card details form</title>
+</head>
+<body>
+  <main class="container">
+    <!-- <div class="content-wrap"> -->
+      <section class="card">
+        <div class="card-back">
+          <p class="cvc">000</p>
+        </div>
+
+        <div class="card-front">
+          <img src="images/card-logo.svg" alt="Card logo">
+          <p class="card-num">0000 0000 0000 0000</p>
+          <div class="flex">
+            <p class="cardholder">Jane Appleseed</p>
+            <p class="card-date">00/00</p>
+          </div>
+        </div>
+      </section>
+
+      <form class="test" action="#" aria-label="Update credit card information">
+        <div class="field-wrap">
+          <div class="field field-cardholder">
+            <label for="cardholder">Cardholder Name</label> <br>
+            <input type="text" name="card-details" id="cardholder" value="" placeholder="e.g. Jane Appleseed">
+            <p class="error-msg">Can't be blank</p>
+          </div>
+
+          <div class="field field-card-num">
+            <label for="card-num">Card Number</label> <br>
+            <input type="text" name="card-details" id="card-num" value="" placeholder="e.g. 1234 5678 9123 0000" minlength="16" maxlength="16">
+            <p class="error-msg">Can't be blank</p>
+          </div>
+          
+          <div class="field-flex">
+            <div class="field field-date">
+              <label for="date">Exp. Date (MM/YY)</label> <br>
+              <input class="month" type="text" name="card-details" id="month" value="" placeholder="MM" maxlength="2">
+              <input class="year" type="text" name="card-details" id="year" value="" placeholder="YY" maxlength="2">
+              <p class="error-msg">Can't be blank</p>
+            </div>
+          
+            <div class="field field-cvc">
+              <label for="cvc">CVC</label> <br>
+              <input type="text" name="card-details" id="cvc" value="" placeholder="e.g. 123" maxlength="3">
+              <p class="error-msg">Can't be blank</p>
+            </div>
+          </div>
+          <button type="submit">Confirm</button>
+        </div>
+      </form>
+
+    <!-- Completed state start -->
+
+      <article class="card-complete">
+        <img src="images/icon-complete.svg" alt="" aria-hidden="true">
+        <h1>Thank you!</h1>
+        <p>We've added your card details</p>
+        <button>Continue</button>
+      </article>
+    <!-- </div> -->
+  </main>
+</body>
+</html>
